@@ -4,4 +4,9 @@ Contains a full stack web application, leveraging OpenAI, built to recommend a s
 ### 🏄 Getting Started
 ```
 nvm install 23.5.0
+npx create-next-app@latest
 ```
+
+### 🔧 Core libraries
+- [Node.js](https://nodejs.org/en)
+- [React](https://reactjs.org/)
