@@ -9,16 +9,16 @@ const HowItWorks = () => {
     <div className="bg-offwhite-2 p-8 rounded-lg justify-items-center space-y-8">
       <div className="text-5xl font-black">How It Works</div>
       <div className="flex flex-row justify-between">
-        <div className="border-r-4 justify-items-center">
-          <MusicIcon className="border-2 rounded-full h-32 w-32 p-8" />
+        <div className="border-r-4 border-white justify-items-center">
+          <MusicIcon className="border-4 border-white rounded-full h-32 w-32 p-8" />
           Tell us your favorite song.
         </div>
-        <div className="border-r-4 justify-items-center">
-          <Bot className="border-2 rounded-full h-32 w-32 p-8" />
+        <div className="border-r-4 border-white justify-items-center">
+          <Bot className="border-4 border-white rounded-full h-32 w-32 p-8" />
           We'll use the song to find books with a similar theme.
         </div>
         <div className="justify-items-center">
-          <BookOpen className="border-2 rounded-full h-32 w-32 p-8" />
+          <BookOpen className="border-4 border-white rounded-full h-32 w-32 p-8" />
           You'll get a list of books that match your vibe.
         </div>
       </div>
