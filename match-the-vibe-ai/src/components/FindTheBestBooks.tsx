@@ -1,3 +1,4 @@
+"use client";
 // default
 import { useState, useCallback } from "react";
 
