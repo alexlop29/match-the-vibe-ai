@@ -1,0 +1,3 @@
+class BaseService {}
+
+export { BaseService };
