@@ -10,4 +10,5 @@ npm run dev
 - [Node.js 23.5.0](https://nodejs.org/en)
 - [React](https://reactjs.org/)
 - [Shadcn](https://ui.shadcn.com/)
-- [Ludicen](hhttps://lucide.dev/)
+- [Ludice](hhttps://lucide.dev/)
+- [Open AI](https://platform.openai.com/)
