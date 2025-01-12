@@ -16,8 +16,10 @@ npm run dev
 - [TanStack Query](https://tanstack.com/query/latest)
 - [Shadcn](https://ui.shadcn.com/)
 - [Ludice](https://lucide.dev/)
+- [Zod](https://zod.dev/)
 
 ### 📝 Developer Notes
+
 > Structured Outputs is a feature that ensures the model will always generate responses that adhere to your supplied JSON Schema, so you don't need to worry about the model omitting a required key, or hallucinating an invalid enum value.
 
 > Some benefits of Structured Outputs include:
@@ -50,5 +52,4 @@ const completion = await openai.beta.chat.completions.parse({
 const event = completion.choices[0].message.parsed;
 ```
 
->  Structured Outputs via response_format are more suitable when you want to indicate a structured schema for use when the model responds to the user, rather than when the model calls a tool.
-
+> Structured Outputs via response_format are more suitable when you want to indicate a structured schema for use when the model responds to the user, rather than when the model calls a tool.

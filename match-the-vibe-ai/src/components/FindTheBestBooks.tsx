@@ -30,7 +30,10 @@ const FindTheBestBooks = () => {
   const { mutate: handleQuery } = useMutation({
     mutationFn: async () => {
       console.log(`confirm trigger start`);
-      let recommendation = await getRecommendations();
+      let recommendation = await getRecommendations(
+        query.songName,
+        query.artistName,
+      );
       console.log(recommendation);
     },
     onError: (error) => {

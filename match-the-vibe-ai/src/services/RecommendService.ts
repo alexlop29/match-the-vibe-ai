@@ -12,14 +12,14 @@ class RecommendService extends BaseService {
     this.recommendRepository = new RecommendRepostiory();
   }
 
-  get() {
-    return this.recommendRepository.getRecommendations();
+  get(song: string, artist: string) {
+    return this.recommendRepository.getRecommendations(song, artist);
   }
 }
 
-export async function getRecommendations() {
+export async function getRecommendations(song: string, artist: string) {
   const recommendService = new RecommendService();
-  let recommendation = await recommendService.get();
+  let recommendation = await recommendService.get(song, artist);
   return recommendation;
 }
 
