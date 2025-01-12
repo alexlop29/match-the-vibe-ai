@@ -29,6 +29,7 @@ const FindTheBestBooks = () => {
 
   const { mutate: handleQuery } = useMutation({
     mutationFn: async () => {
+      console.log(`confirm trigger start`);
       let recommendation = await getRecommendations();
       console.log(recommendation);
     },
