@@ -4,7 +4,7 @@ import { useState, useCallback } from "react";
 
 // deps
 import { useMutation } from "@tanstack/react-query";
-import { RecommendService } from "@/services/RecommendService";
+import { getRecommendations } from "@/services/RecommendService";
 
 // comps
 import { Input } from "./ui/input";
@@ -29,8 +29,7 @@ const FindTheBestBooks = () => {
 
   const { mutate: handleQuery } = useMutation({
     mutationFn: async () => {
-      const recommendService = new RecommendService();
-      let recommendation = await recommendService.get();
+      let recommendation = await getRecommendations();
       console.log(recommendation);
     },
     onError: (error) => {
