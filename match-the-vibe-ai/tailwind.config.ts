@@ -10,6 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        lightblue: "#d7f6ff",
+        darkblue: "#0046fa",
         base: "#eaf0f8",
         offwhite: "#f7fbfc",
         "offwhite-2": "#f7f9fb",
