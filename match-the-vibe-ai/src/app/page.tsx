@@ -8,6 +8,7 @@ import { FindTheBestBooks } from "@/components/FindTheBestBooks";
 import { HowItWorks2 } from "@/components/HowItWorks2";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Books } from "@/components/Books";
 
 // deps
 import { useMutation } from "@tanstack/react-query";
@@ -45,10 +46,10 @@ export default function Home() {
   });
 
   return (
-    <div className="p-8 bg-offwhite2">
-      <div className="flex flex-row rounded-lg content-center gap-8">
-        <div className="italic text-purple text-lg">Match The Vibe AI</div>
-        <div className="flex flex-row gap-4">
+    <div className="bg-offwhite2">
+      <div className="flex flex-row content-center rounded-lg gap-8 p-8">
+        <div className="text-lg">Match The Vibe AI</div>
+        <div className="flex flex-row gap-8">
           <Input
             onBlur={handleChange}
             name="songName"
@@ -70,7 +71,8 @@ export default function Home() {
         <HowItWorks2 />
       </div>
       <div className="p-8">
-        <FindTheBestBooks />
+        <Books />
+        {/* <FindTheBestBooks /> */}
       </div>
     </div>
   );

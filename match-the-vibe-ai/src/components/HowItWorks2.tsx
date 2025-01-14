@@ -16,7 +16,7 @@ const HowItWorks2 = () => {
       </div>
       <div className="bg-lightblue p-2 rounded-tl-3xl rounded-tr-md rounded-br-3xl rounded-bl-md">
         <Image
-          src="/images/bird.jpg"
+          src="/images/musician.jpg"
           alt="Bird"
           width={420}
           height={300}
