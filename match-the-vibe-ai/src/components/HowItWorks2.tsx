@@ -10,8 +10,8 @@ const HowItWorks2 = () => {
         </div>
         <ul>
           <li>Tell us your favorite song.</li>
-          <li>We'll use the song to find books with a similar theme.</li>
-          <li>You'll get a list of books that match your vibe.</li>
+          <li>We will use the song to find books with a similar theme.</li>
+          <li>You will get a list of books that match your vibe.</li>
         </ul>
       </div>
       <div className="bg-lightblue p-2 rounded-tl-3xl rounded-tr-md rounded-br-3xl rounded-bl-md">

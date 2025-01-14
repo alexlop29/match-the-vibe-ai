@@ -47,24 +47,26 @@ export default function Home() {
 
   return (
     <div className="bg-offwhite2">
-      <div className="flex flex-row content-center rounded-lg gap-8 p-8">
+      <div className="flex flex-row justify-between content-center rounded-lg gap-8 p-8">
         <div className="text-lg">Match The Vibe AI</div>
-        <div className="flex flex-row gap-8">
-          <Input
-            onBlur={handleChange}
-            name="songName"
-            placeholder="Song Name"
-          />
-          <Input
-            onBlur={handleChange}
-            name="artistName"
-            placeholder="Artist Name"
-          />
-        </div>
-        <div>
-          <Button className="bg-darkblue" onClick={() => handleQuery()}>
-            Try Now
-          </Button>
+        <div className="flex flex-row gap-x-8">
+          <div className="flex flex-row gap-x-8">
+            <Input
+              onBlur={handleChange}
+              name="songName"
+              placeholder="Song Name"
+            />
+            <Input
+              onBlur={handleChange}
+              name="artistName"
+              placeholder="Artist Name"
+            />
+          </div>
+          <div>
+            <Button className="bg-darkblue" onClick={() => handleQuery()}>
+              Try Now
+            </Button>
+          </div>
         </div>
       </div>
       <div className="p-8">
