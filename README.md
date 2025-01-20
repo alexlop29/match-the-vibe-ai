@@ -14,6 +14,7 @@ npm run dev
 - [React](https://reactjs.org/)
 - [Open AI](https://platform.openai.com/)
 - [TanStack Query](https://tanstack.com/query/latest)
+- [Web APIs - DOMParser](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser)
 - [Shadcn](https://ui.shadcn.com/)
 - [Ludice](https://lucide.dev/)
 - [Zod](https://zod.dev/)
