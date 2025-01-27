@@ -25,13 +25,15 @@ class RecommendRepostiory extends BaseRepository {
         {
           role: "system",
           content:
-            "You are a book recommendation system. Recommend a list of ten books based on the provided song and artist.",
+            "You are a book recommendation system. Recommend a list of ten books based on the provided song and artist, with Barnes and Noble link.",
         },
         { role: "user", content: `Song: ${song}, Artist: ${artist}` },
       ],
       response_format: zodResponseFormat(Books, "books"),
     });
-    return completion;
+    return completion.choices[0].message.content != null
+      ? JSON.parse(completion.choices[0].message.content).books
+      : [];
   }
 }
 

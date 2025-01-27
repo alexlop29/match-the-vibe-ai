@@ -4,7 +4,6 @@
 import { useState, useCallback } from "react";
 
 // comps
-import { FindTheBestBooks } from "@/components/FindTheBestBooks";
 import { HowItWorks2 } from "@/components/HowItWorks2";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +19,8 @@ export default function Home() {
     artistName: "",
   });
 
+  const [recommendations, setRecommendations] = useState([]);
+
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = {
@@ -34,11 +35,12 @@ export default function Home() {
   const { mutate: handleQuery } = useMutation({
     mutationFn: async () => {
       console.log(`confirm trigger start`);
-      let recommendation = await getRecommendations(
+      let recommendations = await getRecommendations(
         query.songName,
         query.artistName,
       );
-      console.log(recommendation);
+      console.log(recommendations);
+      setRecommendations(recommendations);
     },
     onError: (error) => {
       console.log(error);
@@ -73,7 +75,7 @@ export default function Home() {
         <HowItWorks2 />
       </div>
       <div className="p-8">
-        <Books />
+        <Books books={recommendations} />
         {/* <FindTheBestBooks /> */}
       </div>
     </div>
