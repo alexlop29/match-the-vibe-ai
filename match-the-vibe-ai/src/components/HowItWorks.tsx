@@ -1,29 +1,14 @@
-// comps
-import { Button } from "./ui/button";
-
-// icons
-import { MusicIcon, Bot, BookOpen } from "lucide-react";
-
 const HowItWorks = () => {
   return (
-    <div className="bg-offwhite-2 p-8 rounded-lg justify-items-center space-y-8">
-      <div className="text-5xl font-black">How It Works</div>
-      <div className="flex flex-row justify-between">
-        <div className="border-r-4 border-white justify-items-center">
-          <MusicIcon className="border-4 border-white rounded-full h-32 w-32 p-8" />
-          Tell us your favorite song.
-        </div>
-        <div className="border-r-4 border-white justify-items-center">
-          <Bot className="border-4 border-white rounded-full h-32 w-32 p-8" />
-          We'll use the song to find books with a similar theme.
-        </div>
-        <div className="justify-items-center">
-          <BookOpen className="border-4 border-white rounded-full h-32 w-32 p-8" />
-          You'll get a list of books that match your vibe.
-        </div>
+    <div className="text-center content-center space-y-16">
+      <div className="font-black text-4xl">
+        Discover your favorite books based on your favorite song!
       </div>
-      <Button className="bg-purple">Try now</Button>
-      <div>Get book recommendations in minutes.</div>
+      <ul>
+        <li>Tell us your favorite song.</li>
+        <li>We will use the song to find books with a similar theme.</li>
+        <li>You will get a list of books that match your vibe.</li>
+      </ul>
     </div>
   );
 };

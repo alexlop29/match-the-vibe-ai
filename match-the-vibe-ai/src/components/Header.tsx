@@ -29,12 +29,14 @@ const Header = () => {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["recommendations"],
     queryFn: async () => {
+      console.log("fetching recommendations");
       let recommendations = await getRecommendations(
         query.songName,
         query.artistName,
       );
       queryClient.setQueryData(["recommendations"], recommendations);
       setIsTriggered(false);
+      console.log("recommendations fetched");
       return recommendations;
     },
     enabled: !!query.songName && !!query.artistName && isTriggered,
