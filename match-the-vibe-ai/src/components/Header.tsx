@@ -9,7 +9,8 @@ import { Input } from "@/components/ui/input";
 // deps
 import { useQuery } from "@tanstack/react-query";
 import { getRecommendations } from "@/services/RecommendService";
-import { queryClient } from "@/app/provider";
+import { store, queryClient } from "@/app/provider";
+import { tree } from "next/dist/build/templates/app-page";
 
 const Header = () => {
   const [query, setQuery] = useState({
@@ -30,6 +31,12 @@ const Header = () => {
     queryKey: ["recommendations"],
     queryFn: async () => {
       console.log("fetching recommendations");
+      store.setState((state) => {
+        return {
+          ["isLoading"]: true,
+        };
+      });
+      console.log("view loadingStore", store.state.isLoading);
       let recommendations = await getRecommendations(
         query.songName,
         query.artistName,
@@ -37,6 +44,12 @@ const Header = () => {
       queryClient.setQueryData(["recommendations"], recommendations);
       setIsTriggered(false);
       console.log("recommendations fetched");
+      store.setState((state) => {
+        return {
+          ["isLoading"]: false,
+        };
+      });
+      console.log("view loadingStore", store.state.isLoading);
       return recommendations;
     },
     enabled: !!query.songName && !!query.artistName && isTriggered,

@@ -5,11 +5,17 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { Header } from "@/components/Header";
 import { Books } from "@/components/Books";
 import { Musician } from "@/components/Musician";
+import { Loader } from "@/components/Loader";
 
 // deps
 import { useQuery } from "@tanstack/react-query";
+import { store } from "./provider";
+import { useStore } from "@tanstack/react-store";
 
 export default function Home() {
+  const { isLoading } = useStore(store);
+  console.log("view loadingStore in Home", isLoading);
+
   const { data: recommendations } = useQuery({
     queryKey: ["recommendations"],
     queryFn: async () => {
@@ -34,6 +40,19 @@ export default function Home() {
   }
 
   // state 2: loading
+  if (isLoading) {
+    return (
+      <div className="bg-offwhite2">
+        <Header />
+        <div className="p-8">
+          <div className="flex flex-col md:flex-row justify-center gap-16">
+            <Loader />
+            <Musician />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // state 3: recommendations
   if (recommendations.length > 0) {
