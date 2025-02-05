@@ -24,7 +24,7 @@ export default function Home() {
       <div className="bg-offwhite2">
         <Header />
         <div className="p-8">
-          <div className="flex flex-row justify-center gap-16">
+          <div className="flex flex-col md:flex-row justify-center gap-16">
             <HowItWorks />
             <Musician />
           </div>
@@ -41,8 +41,8 @@ export default function Home() {
       <div className="bg-offwhite2">
         <Header />
         <div className="p-8">
-          <div className="flex flex-row justify-between">
-            <div className="w-1/2 pl-16 pr-8">
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="w-full md:w-1/2 pl-16 pr-8">
               <Books />
             </div>
             <Musician />

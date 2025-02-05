@@ -43,23 +43,28 @@ const Header = () => {
   });
 
   return (
-    <div className="flex flex-row justify-between content-center rounded-lg gap-8 p-8">
-      <div className="text-lg">Match The Vibe AI</div>
-      <div className="flex flex-row gap-x-8">
-        <div className="flex flex-row gap-x-8">
+    <div className="flex flex-col md:flex-row justify-between items-center rounded-lg gap-8 p-8">
+      <div className="text-lg text-center">Match The Vibe AI</div>
+      <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+        <div className="flex flex-col md:flex-row gap-4 w-full">
           <Input
             onChange={handleChange}
             name="songName"
             placeholder="Song Name"
+            className="text-black dark:text-white w-full sm:w-auto"
           />
           <Input
             onChange={handleChange}
             name="artistName"
             placeholder="Artist Name"
+            className="text-black dark:text-white w-full sm:w-auto"
           />
         </div>
-        <div>
-          <Button className="bg-darkblue" onClick={() => setIsTriggered(true)}>
+        <div className="flex justify-center sm:justify-start">
+          <Button
+            className="bg-darkblue w-full md:w-auto"
+            onClick={() => setIsTriggered(true)}
+          >
             Try Now
           </Button>
         </div>

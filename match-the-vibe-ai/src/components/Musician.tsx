@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Musician = () => {
   return (
-    <div className="bg-lightblue p-2 rounded-tl-3xl rounded-tr-md rounded-br-3xl rounded-bl-md">
+    <div className="bg-lightblue p-2 rounded-tl-3xl rounded-tr-md rounded-br-3xl rounded-bl-md flex justify-center items-center">
       <Image
         src="/images/musician.jpg"
         alt="Bird"
