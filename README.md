@@ -54,3 +54,13 @@ const event = completion.choices[0].message.parsed;
 ```
 
 > Structured Outputs via response_format are more suitable when you want to indicate a structured schema for use when the model responds to the user, rather than when the model calls a tool.
+
+### Monetization Notes
+
+In-App Monetization and SDKs in Ad Tech:
+- [What Sets SDK Integration Apart in Ad Tech](https://pubmatic.com/blog/sdk-integration/)
+- [What Is In-App Advertising? How Does In-App Advertising Work?](https://www.publift.com/blog/in-app-advertising-for-publishers)
+
+Google AdSense:
+- [Google AdSense - Success Stories](https://adsense.google.com/start/success-stories/)
+- [Interested in AdSense](https://support.google.com/adsense/topic/1319753?hl=en&ref_topic=3373519&sjid=3863464865878674686-NA)
