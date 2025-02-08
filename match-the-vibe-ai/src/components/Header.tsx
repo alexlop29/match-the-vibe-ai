@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { useQuery } from "@tanstack/react-query";
 import { getRecommendations } from "@/services/RecommendService";
 import { store, queryClient } from "@/app/provider";
-import { tree } from "next/dist/build/templates/app-page";
+import { ModeToggle } from "./ModeToggle";
 
 const Header = () => {
   const [query, setQuery] = useState({
@@ -57,7 +57,10 @@ const Header = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center rounded-lg gap-8 p-8">
-      <div className="text-lg text-center">Match The Vibe AI</div>
+      <div className="flex flex-row gap-8 items-center">
+        <div className="text-lg text-center">Match The Vibe AI</div>
+        <ModeToggle />
+      </div>
       <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
         <div className="flex flex-col md:flex-row gap-4 w-full">
           <Input
