@@ -1,5 +1,8 @@
 "use client";
 
+// default
+import { useState } from "react";
+
 // comps
 import { HowItWorks } from "@/components/HowItWorks";
 import { Header } from "@/components/Header";
@@ -14,7 +17,6 @@ import { useStore } from "@tanstack/react-store";
 
 export default function Home() {
   const { isLoading } = useStore(store);
-  console.log("view loadingStore in Home", isLoading);
 
   const { data: recommendations } = useQuery({
     queryKey: ["recommendations"],
@@ -46,7 +48,9 @@ export default function Home() {
         <Header />
         <div className="p-8">
           <div className="flex flex-col md:flex-row justify-center gap-16">
-            <Loader />
+            <div className="w-full md:w-1/2 pl-16 pr-8 items-center content-center">
+              <Loader />
+            </div>
             <Musician />
           </div>
         </div>
@@ -61,7 +65,7 @@ export default function Home() {
         <Header />
         <div className="p-8">
           <div className="flex flex-col md:flex-row justify-between">
-            <div className="w-full md:w-1/2 pl-16 pr-8">
+            <div className="w-full md:w-1/2 pl-16 pr-8 items-center content-center">
               <Books />
             </div>
             <Musician />

@@ -79,7 +79,9 @@ const Header = () => {
         <div className="flex justify-center sm:justify-start">
           <Button
             className="bg-darkblue w-full md:w-auto"
-            onClick={() => setIsTriggered(true)}
+            onClick={() => {
+              setIsTriggered(true);
+            }}
           >
             Try Now
           </Button>
