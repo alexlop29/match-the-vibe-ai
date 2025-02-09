@@ -1,8 +1,5 @@
 "use client";
 
-// default
-import { useState } from "react";
-
 // comps
 import { HowItWorks } from "@/components/HowItWorks";
 import { Header } from "@/components/Header";
